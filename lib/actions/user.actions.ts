@@ -30,7 +30,7 @@ export async function getUserById(userId: string) {
 
     return JSON.parse(JSON.stringify(user));
   } catch (error) {
-    
+
     handleError(error);
   }
 }
@@ -38,6 +38,7 @@ export async function getUserById(userId: string) {
 
 export async function updateUser(clerkId: string, user: UpdateUserParams) {
   try {
+    
     await connectToDatabase();
 
     const updatedUser = await User.findOneAndUpdate({ clerkId }, user, {
