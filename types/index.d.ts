@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-
-// ====== USER PARAMS
 declare type CreateUserParams = {
   clerkId: string;
   email: string;
@@ -11,13 +8,12 @@ declare type CreateUserParams = {
 };
 
 declare type UpdateUserParams = {
-  firstName?: string;
-  lastName?: string;
-  username?: string;
-  photo?: string;
+  firstName: string;
+  lastName: string;
+  username: string;
+  photo: string;
 };
 
-// ====== IMAGE PARAMS
 declare type AddImageParams = {
   image: {
     title: string;
@@ -71,7 +67,6 @@ declare type Transformations = {
   removeBackground?: boolean;
 };
 
-// ====== TRANSACTION PARAMS
 declare type CheckoutTransactionParams = {
   plan: string;
   credits: number;
@@ -95,7 +90,6 @@ declare type TransformationTypeKey =
   | "recolor"
   | "removeBackground";
 
-// ====== URL QUERY PARAMS
 declare type FormUrlQueryParams = {
   searchParams: string;
   key: string;
